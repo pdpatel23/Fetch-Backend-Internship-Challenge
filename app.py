@@ -72,6 +72,7 @@ def spend_points():
         
     output_list = {}
 
+    #add all spent points for each payer
     for transaction in spent_points:
         payer = transaction['payer']
         points = transaction['points']
