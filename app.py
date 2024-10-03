@@ -36,5 +36,10 @@ def add_points():
    
     return "", 200
 
+#return current point balance for each payer
+@app.route('/balance', methods=['GET'])
+def get_balance():
+    return jsonify(payer_balances), 200
+
 if __name__ == '__main__':
     app.run(port=8000)
