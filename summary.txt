@@ -16,7 +16,7 @@ The solution also uses appropriate HTTP methods like POST for adding and spendin
 
 Some of the disadvantages include a lack of data persistence. All the transactions of a user would be lost if the service restarts because of no database integration. The 
 implementation also assumes that the input data will always be in the correct format which could potentially lead to crashes or unexpected behavior when invalid data is received. 
-Additionally, a comprehensive set of tests needs to be developed to verify the functionality and reliability of the API.
+Additionally, a comprehensive set of tests need to be developed to verify the functionality and reliability of the API.
 
 
 3. What has been a favorite school/personal project thus far? What about it that challenged you?
@@ -30,5 +30,4 @@ I encountered a significant learning curve. I used a combination of online cours
 One of the biggest challenges I faced was integrating the API to gather weather data and effectively parsing the data returned by the API. The raw data from the API often came in complex
 JSON formats, which required careful handling to extract the specific information needed for my application. Additionally, I found it difficult to decide how to separate the functions so 
 that the frontend could easily request hourly, daily, alerts, and weather descriptions. I realized the importance of creating functions tailored to specific tasks, enabling the frontend 
-to seamlessly call the appropriate Flask route for the necessary information. This structured approach not only streamlined the code but also 
-improved the overall efficiency of the application.
+to seamlessly call the appropriate Flask route for the necessary information. This structured approach not only streamlined the code but also improved the overall efficiency of the application.
