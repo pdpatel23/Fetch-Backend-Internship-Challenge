@@ -2,11 +2,6 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-#home route to make sure server is running
-@app.route('/')
-def home():
-    return "Points API!"
-
 #stores all transactions (payer, points, timestamp)
 transactions = [] 
 
