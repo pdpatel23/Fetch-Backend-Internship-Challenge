@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-
 #home route to make sure server is running
 @app.route('/')
 def home():
@@ -13,7 +12,6 @@ transactions = []
 
 #stores total points of balance for each payer
 payer_balances = {} 
-
 
 #adds points for a specific payer and logs tranaction with timestamp
 @app.route('/add', methods=['POST'])
@@ -65,9 +63,7 @@ def spend_points():
         transaction['points'] -= points_deducted
         payer_balances[payer] -= points_deducted
 
-
         spent_points.append({'payer': payer, 'points': -points_deducted})
-
         points_to_spend -= points_deducted
         
     output_list = {}
@@ -84,9 +80,7 @@ def spend_points():
    
     output_list = [{'payer': payer, 'points': points} for payer, points in output_list.items()]
 
-
     return jsonify(output_list), 200
-
 
 #return current point balance for each payer
 @app.route('/balance', methods=['GET'])
